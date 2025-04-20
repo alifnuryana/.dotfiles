@@ -94,3 +94,31 @@ if [ ! -f "$HOME/.ssh/id_ed25519" ]; then
 else
     echo "SSH key already exists at $HOME/.ssh/id_ed25519."
 fi
+
+# Check if Node.js is installed
+if ! command -v node &> /dev/null; then
+    echo "Node.js is not installed. Installing it using dnf..."
+    sudo dnf install -y nodejs
+    if [ $? -eq 0 ]; then
+        echo "Node.js has been successfully installed."
+    else
+        echo "Failed to install Node.js. Please check your package manager or permissions."
+        exit 1
+    fi
+else
+    echo "Node.js is already installed."
+fi
+
+# Check if pnpm is installed
+if ! command -v pnpm &> /dev/null; then
+    echo "pnpm is not installed. Installing it using dnf..."
+    sudo dnf install -y pnpm
+    if [ $? -eq 0 ]; then
+        echo "pnpm has been successfully installed."
+    else
+        echo "Failed to install pnpm. Please check your package manager or permissions."
+        exit 1
+    fi
+else
+    echo "pnpm is already installed."
+fi
