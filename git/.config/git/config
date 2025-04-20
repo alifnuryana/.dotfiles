@@ -1,5 +1,13 @@
-user.name=syntaxsavvy
-user.email=alifnuryana0@gmail.com
-user.signingkey=/home/alifnuryana/.ssh/github.pub
-init.defaultbranch=main
-gpg.format=ssh
+[user]
+    name = "Alif Nuryana"
+    email = alifnuryana0@gmail.com
+    signingkey = /home/alifnuryana/.ssh/id_ed25519.pub
+
+[init]
+    defaultBranch = main
+
+[gpg]
+    format = ssh
+
+[commit]
+    gpgsign = true
