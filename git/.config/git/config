@@ -1,0 +1,5 @@
+user.name=syntaxsavvy
+user.email=alifnuryana0@gmail.com
+user.signingkey=/home/alifnuryana/.ssh/github.pub
+init.defaultbranch=main
+gpg.format=ssh
